@@ -1,21 +1,34 @@
 [gd_scene format=3 uid="uid://dq4l7fkolapt5"]
 
-[ext_resource type="Texture2D" uid="uid://b0meinow67auv" path="res://Screenshot 2026-05-09 111155.png" id="1_lcxpe"]
+[ext_resource type="Script" uid="uid://dnffigw3abu1t" path="res://memory_wall.gd" id="1_33mnl"]
+[ext_resource type="Texture2D" uid="uid://22rysivoc4la" path="res://ChatGPT Image May 9, 2026, 03_58_22 PM (1).png" id="2_33mnl"]
 [ext_resource type="Script" uid="uid://coxrbc2cxjq7h" path="res://screen_area_2d.gd" id="2_shrh5"]
+[ext_resource type="Script" uid="uid://lt2kbhbnjqul" path="res://switch_folder_2d.gd" id="4_e3jt3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_33mnl"]
 size = Vector2(268, 204.5)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xeeck"]
+size = Vector2(119.5, 100.625)
+
 [node name="MemoryWall" type="Node2D" unique_id=34537250]
+script = ExtResource("1_33mnl")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1147565517]
-texture = ExtResource("1_lcxpe")
+position = Vector2(1127.5, 700)
+texture = ExtResource("2_33mnl")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1444863721]
+offset_right = 2265.0
+offset_bottom = 1392.0
+mouse_filter = 1
+color = Color(0, 0, 0, 0.6666667)
 
 [node name="ScreenArea2D" type="Area2D" parent="." unique_id=936846660]
 script = ExtResource("2_shrh5")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ScreenArea2D" unique_id=1847007437]
-position = Vector2(-253, -212.25)
+position = Vector2(878, 487)
 shape = SubResource("RectangleShape2D_33mnl")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1389930874]
@@ -39,3 +52,14 @@ offset_bottom = 721.0
 scale = Vector2(3, 3)
 text = ">"
 metadata/_edit_use_anchors_ = true
+
+[node name="SwitchFolder2D" type="Area2D" parent="." unique_id=19650666]
+script = ExtResource("4_e3jt3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SwitchFolder2D" unique_id=979230787]
+position = Vector2(624.25, 850.3125)
+rotation = 0.082030475
+shape = SubResource("RectangleShape2D_xeeck")
+
+[connection signal="pressed" from="CanvasLayer/Left" to="." method="_on_left_pressed"]
+[connection signal="pressed" from="CanvasLayer/Right" to="." method="_on_right_pressed"]

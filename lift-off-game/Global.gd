@@ -1,4 +1,4 @@
 extends Node
 
-var CurrentScene = ""
-var PreviousScene = ""
+var SceneToLoad = "res://obervatory_wall.tscn"
+var Lights = false

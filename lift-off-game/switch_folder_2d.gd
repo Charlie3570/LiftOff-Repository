@@ -7,4 +7,4 @@ func _input_event(viewport, event, shape_idx):
 		# store where we came from
 		Global.SceneToLoad = "res://memory_wall.tscn"
 		# load zoom scene
-		get_tree().change_scene_to_file("res://screen_zoom.tscn")
+		get_tree().change_scene_to_file("res://switch_folder.tscn")

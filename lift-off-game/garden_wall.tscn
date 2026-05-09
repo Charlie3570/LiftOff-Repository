@@ -1,8 +1,42 @@
 [gd_scene format=3 uid="uid://dykldsvl52tsn"]
 
 [ext_resource type="Texture2D" uid="uid://dp4t7m8qpkmqr" path="res://Screenshot 2026-05-09 114617.png" id="1_lopij"]
+[ext_resource type="Script" uid="uid://bgx7qno6w4fjo" path="res://garden_wall.gd" id="1_rry7k"]
 
 [node name="GardenWall" type="Node2D" unique_id=119717772]
+script = ExtResource("1_rry7k")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=624967463]
+position = Vector2(1127.5, 700)
 texture = ExtResource("1_lopij")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=2046495898]
+offset_right = 2265.0
+offset_bottom = 1392.0
+mouse_filter = 1
+color = Color(0, 0, 0, 0.6666667)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=642092453]
+
+[node name="Left" type="Button" parent="CanvasLayer" unique_id=1058149986]
+anchors_preset = -1
+anchor_right = 0.42700002
+offset_left = 25.0
+offset_top = 690.0
+offset_right = -919.885
+offset_bottom = 721.0
+scale = Vector2(3, 3)
+text = "<"
+metadata/_edit_use_anchors_ = true
+
+[node name="Right" type="Button" parent="CanvasLayer" unique_id=1819014520]
+offset_left = 2165.0
+offset_top = 690.0
+offset_right = 2183.0
+offset_bottom = 721.0
+scale = Vector2(3, 3)
+text = ">"
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="CanvasLayer/Left" to="." method="_on_left_pressed"]
+[connection signal="pressed" from="CanvasLayer/Right" to="." method="_on_right_pressed"]

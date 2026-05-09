@@ -1,13 +1,32 @@
 [gd_scene format=3 uid="uid://btictyajdkskw"]
 
 [ext_resource type="Texture2D" uid="uid://bcqnioo2na4ie" path="res://Screen zoom.png" id="1_4sux6"]
+[ext_resource type="Script" uid="uid://bgwvltajtjv7m" path="res://screen_zoom.gd" id="1_gvw05"]
 [ext_resource type="Script" uid="uid://ddvtypu8lw253" path="res://exit.gd" id="2_a4uoh"]
+[ext_resource type="Script" uid="uid://mhr81icdwpu5" path="res://light_switch_2d.gd" id="3_cym14"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_gvw05"]
+radius = 30.066593
 
 [node name="ScreenZoom" type="Node2D" unique_id=447127868]
+script = ExtResource("1_gvw05")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=269768614]
 position = Vector2(1118, 710)
 texture = ExtResource("1_4sux6")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=761490135]
+offset_right = 2265.0
+offset_bottom = 1392.0
+mouse_filter = 1
+color = Color(0, 0, 0, 0.6666667)
+
+[node name="LightSwitch2D" type="Area2D" parent="." unique_id=1813034059]
+script = ExtResource("3_cym14")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LightSwitch2D" unique_id=320645911]
+position = Vector2(1024, 412)
+shape = SubResource("CircleShape2D_gvw05")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1515433897]
 
