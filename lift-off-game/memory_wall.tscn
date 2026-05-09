@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://dq4l7fkolapt5"]
+
+[ext_resource type="Texture2D" uid="uid://b0meinow67auv" path="res://Screenshot 2026-05-09 111155.png" id="1_lcxpe"]
+[ext_resource type="Script" uid="uid://coxrbc2cxjq7h" path="res://screen_area_2d.gd" id="2_shrh5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_33mnl"]
+size = Vector2(268, 204.5)
+
+[node name="MemoryWall" type="Node2D" unique_id=34537250]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1147565517]
+texture = ExtResource("1_lcxpe")
+
+[node name="ScreenArea2D" type="Area2D" parent="." unique_id=936846660]
+script = ExtResource("2_shrh5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ScreenArea2D" unique_id=1847007437]
+position = Vector2(-253, -212.25)
+shape = SubResource("RectangleShape2D_33mnl")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1389930874]
+
+[node name="Left" type="Button" parent="CanvasLayer" unique_id=1629471592]
+anchors_preset = -1
+anchor_right = 0.42700002
+offset_left = 25.0
+offset_top = 690.0
+offset_right = -919.885
+offset_bottom = 721.0
+scale = Vector2(3, 3)
+text = "<"
+metadata/_edit_use_anchors_ = true
+
+[node name="Right" type="Button" parent="CanvasLayer" unique_id=1423270898]
+offset_left = 2165.0
+offset_top = 690.0
+offset_right = 2183.0
+offset_bottom = 721.0
+scale = Vector2(3, 3)
+text = ">"
+metadata/_edit_use_anchors_ = true

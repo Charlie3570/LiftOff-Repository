@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://ctgtkmxm7t5i3"]
+
+[ext_resource type="Script" uid="uid://caj2r1ttbfcf3" path="res://observatory_wall.gd" id="1_2sljl"]
+[ext_resource type="Texture2D" uid="uid://7u32q821s6n8" path="res://Screenshot 2026-05-09 110028.png" id="1_u2nq4"]
+
+[node name="ObservatoryWall" type="Node2D" unique_id=1374956213]
+script = ExtResource("1_2sljl")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=250313535]
+texture = ExtResource("1_u2nq4")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=868081240]
+
+[node name="Left" type="Button" parent="CanvasLayer" unique_id=1425060999]
+anchors_preset = -1
+anchor_right = 0.42700002
+offset_left = 25.0
+offset_top = 690.0
+offset_right = -919.885
+offset_bottom = 721.0
+scale = Vector2(3, 3)
+text = "<"
+metadata/_edit_use_anchors_ = true
+
+[node name="Right" type="Button" parent="CanvasLayer" unique_id=1107551819]
+offset_left = 2165.0
+offset_top = 690.0
+offset_right = 2183.0
+offset_bottom = 721.0
+scale = Vector2(3, 3)
+text = ">"
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="CanvasLayer/Left" to="." method="_on_left_pressed"]
+[connection signal="pressed" from="CanvasLayer/Right" to="." method="_on_right_pressed"]

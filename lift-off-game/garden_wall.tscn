@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://dykldsvl52tsn"]
+
+[ext_resource type="Texture2D" uid="uid://dp4t7m8qpkmqr" path="res://Screenshot 2026-05-09 114617.png" id="1_lopij"]
+
+[node name="GardenWall" type="Node2D" unique_id=119717772]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=624967463]
+texture = ExtResource("1_lopij")

@@ -1,0 +1,42 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="LiftOffGame"
+config/features=PackedStringArray("4.6", "Forward Plus")
+config/icon="res://icon.svg"
+
+[autoload]
+
+Global="*uid://bfxbubpt22wc1"
+
+[display]
+
+window/size/viewport_width=2255
+window/size/viewport_height=1400
+window/size/transparent=true
+window/stretch/mode="canvas_items"
+
+[dotnet]
+
+project/assembly_name="LiftOffGame"
+
+[global_group]
+
+main_camera=""
+
+[physics]
+
+3d/physics_engine="Jolt Physics"
+
+[rendering]
+
+rendering_device/driver.windows="d3d12"

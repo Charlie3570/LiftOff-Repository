@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://btictyajdkskw"]
+
+[ext_resource type="Texture2D" uid="uid://bcqnioo2na4ie" path="res://Screen zoom.png" id="1_4sux6"]
+[ext_resource type="Script" uid="uid://ddvtypu8lw253" path="res://exit.gd" id="2_a4uoh"]
+
+[node name="ScreenZoom" type="Node2D" unique_id=447127868]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=269768614]
+position = Vector2(1118, 710)
+texture = ExtResource("1_4sux6")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1515433897]
+
+[node name="Exit" type="Button" parent="CanvasLayer" unique_id=1616172275]
+anchors_preset = -1
+anchor_bottom = 0.39600003
+offset_left = 1143.0
+offset_top = 1265.0
+offset_right = 1161.0
+offset_bottom = 741.6
+scale = Vector2(3, 3)
+text = "V"
+script = ExtResource("2_a4uoh")
+metadata/_edit_use_anchors_ = true

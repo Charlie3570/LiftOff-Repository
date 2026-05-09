@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://frwuripo18j5"]
+
+[ext_resource type="Texture2D" uid="uid://dyosp5r7m1wpa" path="res://Screenshot 2026-05-09 111207.png" id="1_bye6u"]
+
+[node name="ArchiveWall" type="Node2D" unique_id=138493888]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1630514387]
+texture = ExtResource("1_bye6u")
