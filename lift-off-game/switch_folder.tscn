@@ -1,15 +1,15 @@
 [gd_scene format=3 uid="uid://bpsv63swwiymo"]
 
 [ext_resource type="Script" uid="uid://bgwvltajtjv7m" path="res://screen_zoom.gd" id="1_1tymc"]
-[ext_resource type="Texture2D" uid="uid://bjlyad688i8xa" path="res://ChatGPT Image May 9, 2026, 04_22_35 PM.png" id="2_vfv6s"]
+[ext_resource type="Texture2D" uid="uid://ce67hhuq2jufq" path="res://ChatGPT Image May 9, 2026, 04_22_35 PM (1).png" id="2_vfv6s"]
 [ext_resource type="Script" uid="uid://ddvtypu8lw253" path="res://exit.gd" id="4_q77ne"]
 
 [node name="SwitchFolder" type="Node2D" unique_id=447127868]
 script = ExtResource("1_1tymc")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=269768614]
-position = Vector2(1149.5, 707.49994)
-scale = Vector2(1.4412318, 1.4402834)
+position = Vector2(1142.1278, 701.0754)
+scale = Vector2(1.0198421, 1.0370352)
 texture = ExtResource("2_vfv6s")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=761490135]
