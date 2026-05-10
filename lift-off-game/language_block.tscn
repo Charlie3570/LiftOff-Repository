@@ -1,16 +1,21 @@
 [gd_scene format=3 uid="uid://deh4o5cti12nt"]
 
-[ext_resource type="Script" uid="uid://bgwvltajtjv7m" path="res://screen_zoom.gd" id="1_avyu3"]
+[ext_resource type="Script" uid="uid://bgwvltajtjv7m" path="res://LanguageBlock.gd" id="1_avyu3"]
 [ext_resource type="Texture2D" uid="uid://d1g1111sb2qm4" path="res://LanguageBlock.png" id="2_3jc5j"]
 [ext_resource type="Texture2D" uid="uid://b6i8ny0kls7a0" path="res://Blank Button.png" id="3_37nif"]
 [ext_resource type="Script" uid="uid://ddvtypu8lw253" path="res://exit.gd" id="4_axa1c"]
 [ext_resource type="Texture2D" uid="uid://b8q0vq37js502" path="res://Green_Button-removebg-preview (1).png" id="4_x7mxd"]
+[ext_resource type="Texture2D" uid="uid://b8os86eq0t02x" path="res://Paper Piece2.png" id="5_axa1c"]
+[ext_resource type="Script" uid="uid://ddlornyo4twn2" path="res://area_2d2.gd" id="6_axa1c"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_3jc5j"]
 load_path = "res://.godot/imported/Language1.png-ef0c3fd14280c4365acd96dbfb90d318.ctex"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_avyu3"]
 size = Vector2(290.75, 334)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_commr"]
+size = Vector2(230.25, 216)
 
 [node name="ScreenZoom" type="Node2D" unique_id=447127868]
 script = ExtResource("1_avyu3")
@@ -44,17 +49,43 @@ visible = false
 position = Vector2(2158, 107)
 texture = ExtResource("4_x7mxd")
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=761490135]
-offset_right = 2265.0
-offset_bottom = 1392.0
-mouse_filter = 1
-color = Color(0, 0, 0, 0.6666667)
-
 [node name="Slot2D1" type="Area2D" parent="." unique_id=1813034059]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Slot2D1" unique_id=320645911]
 position = Vector2(806.75, 385)
 shape = SubResource("RectangleShape2D_avyu3")
+
+[node name="Slot2D2" type="Area2D" parent="." unique_id=3562032]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Slot2D2" unique_id=819279742]
+position = Vector2(1311, 387)
+shape = SubResource("RectangleShape2D_avyu3")
+
+[node name="Slot2D3" type="Area2D" parent="." unique_id=799360797]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Slot2D3" unique_id=1923038911]
+position = Vector2(1799.625, 385)
+shape = SubResource("RectangleShape2D_avyu3")
+
+[node name="Sprite2D5" type="Sprite2D" parent="." unique_id=1388885602]
+visible = false
+position = Vector2(1325, 357.00006)
+scale = Vector2(2.233813, 2.5833333)
+texture = ExtResource("5_axa1c")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1886042410]
+position = Vector2(173, -543)
+script = ExtResource("6_axa1c")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1035389641]
+position = Vector2(1138.125, 904)
+shape = SubResource("RectangleShape2D_commr")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=761490135]
+offset_right = 2265.0
+offset_bottom = 1392.0
+mouse_filter = 1
+color = Color(0, 0, 0, 0.6666667)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1515433897]
 
@@ -69,18 +100,6 @@ scale = Vector2(3, 3)
 text = "V"
 script = ExtResource("4_axa1c")
 metadata/_edit_use_anchors_ = true
-
-[node name="Slot2D2" type="Area2D" parent="." unique_id=3562032]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Slot2D2" unique_id=819279742]
-position = Vector2(1311, 387)
-shape = SubResource("RectangleShape2D_avyu3")
-
-[node name="Slot2D3" type="Area2D" parent="." unique_id=799360797]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Slot2D3" unique_id=1923038911]
-position = Vector2(1799.625, 385)
-shape = SubResource("RectangleShape2D_avyu3")
 
 [connection signal="input_event" from="Slot2D1" to="." method="_on_slot_2d_1_input_event"]
 [connection signal="input_event" from="Slot2D2" to="." method="_on_slot_2d_2_input_event"]

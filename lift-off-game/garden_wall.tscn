@@ -3,7 +3,10 @@
 [ext_resource type="Texture2D" uid="uid://dp4t7m8qpkmqr" path="res://Screenshot 2026-05-09 114617.png" id="1_lopij"]
 [ext_resource type="Script" uid="uid://bgx7qno6w4fjo" path="res://garden_wall.gd" id="1_rry7k"]
 [ext_resource type="Script" uid="uid://dor4wkiedpjld" path="res://language_block_2d.gd" id="3_ebky8"]
+[ext_resource type="Texture2D" uid="uid://cm0ue23ajvl3n" path="res://ChatGPT Image May 10, 2026, 05_46_40 AM.png" id="3_tdglv"]
 [ext_resource type="Script" uid="uid://hufxmqfqykbn" path="res://flower_2d.gd" id="4_04v7d"]
+[ext_resource type="Texture2D" uid="uid://7i6hg707s6fu" path="res://image-removebg-preview (3).png" id="6_vwbef"]
+[ext_resource type="Script" uid="uid://c6i5fek7iyltk" path="res://area_2dtape.gd" id="7_vwbef"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_04v7d"]
 size = Vector2(360.17035, 144.3125)
@@ -12,12 +15,21 @@ size = Vector2(360.17035, 144.3125)
 radius = 70.0
 height = 254.0
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bt4ch"]
+size = Vector2(254, 114)
+
 [node name="GardenWall" type="Node2D" unique_id=119717772]
 script = ExtResource("1_rry7k")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=624967463]
 position = Vector2(1127.5, 700)
 texture = ExtResource("1_lopij")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=376170517]
+visible = false
+position = Vector2(1123.5, 695.5)
+scale = Vector2(1.4086902, 1.3969697)
+texture = ExtResource("3_tdglv")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=2046495898]
 offset_right = 2265.0
@@ -60,6 +72,19 @@ script = ExtResource("4_04v7d")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Flower2D" unique_id=1781832080]
 position = Vector2(384, 946)
 shape = SubResource("CapsuleShape2D_tdglv")
+
+[node name="Sprite2D3" type="Sprite2D" parent="." unique_id=1852003804]
+visible = false
+position = Vector2(1420, 1128)
+scale = Vector2(0.5, 0.578)
+texture = ExtResource("6_vwbef")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1719758252]
+script = ExtResource("7_vwbef")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1501435609]
+position = Vector2(1415, 1134)
+shape = SubResource("RectangleShape2D_bt4ch")
 
 [connection signal="pressed" from="CanvasLayer/Left" to="." method="_on_left_pressed"]
 [connection signal="pressed" from="CanvasLayer/Right" to="." method="_on_right_pressed"]

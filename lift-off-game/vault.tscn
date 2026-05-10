@@ -1,16 +1,34 @@
 [gd_scene format=3 uid="uid://7gje7xnphs6g"]
 
-[ext_resource type="Script" uid="uid://caup630na01jt" path="res://darken.gd" id="1_vp1ho"]
+[ext_resource type="Script" uid="uid://sdmvblhjry3t" path="res://vault.gd" id="1_0ennw"]
 [ext_resource type="Texture2D" uid="uid://belpmtjoc40xb" path="res://ChatGPT Image May 9, 2026, 11_34_36 PM.png" id="2_cmbqh"]
+[ext_resource type="Texture2D" uid="uid://c3amu0lo78m0y" path="res://Paper Piece1.png" id="3_0ennw"]
 [ext_resource type="Script" uid="uid://ddvtypu8lw253" path="res://exit.gd" id="4_n74d2"]
+[ext_resource type="Script" uid="uid://c08sfl3lquf1w" path="res://area_2d.gd" id="5_0obug"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n74d2"]
+size = Vector2(230.25, 216)
 
 [node name="Vault" type="Node2D" unique_id=447127868]
-script = ExtResource("1_vp1ho")
+script = ExtResource("1_0ennw")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=269768614]
 position = Vector2(1141.5, 627)
 scale = Vector2(1.9, 1.9)
 texture = ExtResource("2_cmbqh")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=922503953]
+visible = false
+position = Vector2(1152, 900)
+scale = Vector2(2.233813, 2.5833333)
+texture = ExtResource("3_0ennw")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1888476138]
+script = ExtResource("5_0obug")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=423096683]
+position = Vector2(1138.125, 904)
+shape = SubResource("RectangleShape2D_n74d2")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=761490135]
 offset_right = 2265.0

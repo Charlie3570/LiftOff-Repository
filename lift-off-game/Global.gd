@@ -13,3 +13,4 @@ var Piece2Collected = false
 var Piece3Collected = false
 var Piece4Collected = false
 var Piece5Collected = false
+var TapeGot = false

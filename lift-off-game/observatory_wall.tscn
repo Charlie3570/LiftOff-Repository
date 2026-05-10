@@ -5,12 +5,16 @@
 [ext_resource type="Texture2D" uid="uid://bcbxb0b4msfly" path="res://Sealed-Screenshot 2026-05-09 110028.png" id="2_trfnq"]
 [ext_resource type="Script" uid="uid://dc8xpb2b33ryo" path="res://switch_area_2d.gd" id="3_vuoh6"]
 [ext_resource type="Script" uid="uid://cirqsfobgbiqj" path="res://vault_2d.gd" id="5_eyep4"]
+[ext_resource type="Script" uid="uid://c337y5a1gnihr" path="res://tape_block.gd" id="6_jyo41"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_trfnq"]
 size = Vector2(353, 265.25)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_trfnq"]
 radius = 140.0357
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l642y"]
+size = Vector2(399, 501.5)
 
 [node name="ObservatoryWall" type="Node2D" unique_id=1374956213]
 script = ExtResource("1_2sljl")
@@ -25,6 +29,7 @@ position = Vector2(1127.5, 700)
 texture = ExtResource("1_u2nq4")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1492868327]
+visible = false
 offset_right = 2265.0
 offset_bottom = 1392.0
 mouse_filter = 1
@@ -66,6 +71,14 @@ script = ExtResource("5_eyep4")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Vault2D" unique_id=794444456]
 position = Vector2(890, 111)
 shape = SubResource("CircleShape2D_trfnq")
+
+[node name="TapeBlock" type="Area2D" parent="." unique_id=114956688]
+position = Vector2(913, 373)
+script = ExtResource("6_jyo41")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TapeBlock" unique_id=947052467]
+position = Vector2(-464.5, 149.25)
+shape = SubResource("RectangleShape2D_l642y")
 
 [connection signal="pressed" from="CanvasLayer/Left" to="." method="_on_left_pressed"]
 [connection signal="pressed" from="CanvasLayer/Right" to="." method="_on_right_pressed"]

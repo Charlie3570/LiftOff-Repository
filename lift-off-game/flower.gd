@@ -12,9 +12,14 @@ func _process(delta: float) -> void:
 	else:
 		$Sprite2D.visible = true
 		$Sprite2D2.visible = false
+	if Global.Piece4Collected == true:
+		$Sprite2D3.visible = false
+	elif Global.Piece4Collected == true and Global.FlowerSolved:
+		$Sprite2D3.visible = true
 func _on_collider_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton and event.pressed:
 		$Sprite2D.visible = false
 		$Sprite2D2.visible = true
 		Global.FlowerSolved = true
+		$Sprite2D3.visible = true
 	
