@@ -109,3 +109,4 @@ func check_solution():
 	if $I2.visible and $I9.visible and $I11.visible:
 		Global.SwitchSolved = true
 		locked = true
+		$Lightened.visible = true

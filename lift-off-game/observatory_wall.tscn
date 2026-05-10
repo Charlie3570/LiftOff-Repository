@@ -2,15 +2,25 @@
 
 [ext_resource type="Script" uid="uid://caj2r1ttbfcf3" path="res://observatory_wall.gd" id="1_2sljl"]
 [ext_resource type="Texture2D" uid="uid://7u32q821s6n8" path="res://Screenshot 2026-05-09 110028.png" id="1_u2nq4"]
+[ext_resource type="Texture2D" uid="uid://bcbxb0b4msfly" path="res://Sealed-Screenshot 2026-05-09 110028.png" id="2_trfnq"]
 [ext_resource type="Script" uid="uid://dc8xpb2b33ryo" path="res://switch_area_2d.gd" id="3_vuoh6"]
+[ext_resource type="Script" uid="uid://cirqsfobgbiqj" path="res://vault_2d.gd" id="5_eyep4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_trfnq"]
 size = Vector2(353, 265.25)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_trfnq"]
+radius = 140.0357
 
 [node name="ObservatoryWall" type="Node2D" unique_id=1374956213]
 script = ExtResource("1_2sljl")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=250313535]
+position = Vector2(1127.5, 700)
+texture = ExtResource("2_trfnq")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=5731826]
+visible = false
 position = Vector2(1127.5, 700)
 texture = ExtResource("1_u2nq4")
 
@@ -48,6 +58,14 @@ script = ExtResource("3_vuoh6")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SwitchArea2D" unique_id=449563761]
 position = Vector2(1806.5, 908.375)
 shape = SubResource("RectangleShape2D_trfnq")
+
+[node name="Vault2D" type="Area2D" parent="." unique_id=1766506751]
+position = Vector2(913, 373)
+script = ExtResource("5_eyep4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Vault2D" unique_id=794444456]
+position = Vector2(890, 111)
+shape = SubResource("CircleShape2D_trfnq")
 
 [connection signal="pressed" from="CanvasLayer/Left" to="." method="_on_left_pressed"]
 [connection signal="pressed" from="CanvasLayer/Right" to="." method="_on_right_pressed"]

@@ -2,6 +2,10 @@
 
 [ext_resource type="Texture2D" uid="uid://dyosp5r7m1wpa" path="res://Screenshot 2026-05-09 111207.png" id="1_bye6u"]
 [ext_resource type="Script" uid="uid://de56e72t1cmjq" path="res://archive_wall.gd" id="1_yksr1"]
+[ext_resource type="Script" uid="uid://bvsguib1muv3e" path="res://continents_2d.gd" id="3_btwbf"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5pihn"]
+radius = 171.56313
 
 [node name="ArchiveWall" type="Node2D" unique_id=138493888]
 script = ExtResource("1_yksr1")
@@ -37,6 +41,14 @@ offset_bottom = 721.0
 scale = Vector2(3, 3)
 text = ">"
 metadata/_edit_use_anchors_ = true
+
+[node name="Continents2D" type="Area2D" parent="." unique_id=1015809152]
+script = ExtResource("3_btwbf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Continents2D" unique_id=1124022854]
+position = Vector2(1127.0002, 537.00006)
+rotation = 0.082030475
+shape = SubResource("CircleShape2D_5pihn")
 
 [connection signal="pressed" from="CanvasLayer/Left" to="." method="_on_left_pressed"]
 [connection signal="pressed" from="CanvasLayer/Right" to="." method="_on_right_pressed"]

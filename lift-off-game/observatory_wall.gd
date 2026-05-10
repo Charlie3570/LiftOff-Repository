@@ -12,3 +12,9 @@ func _process(delta: float) -> void:
 		$ColorRect.visible = false
 	elif Global.Lights == false and $ColorRect.visible == false:
 		$ColorRect.visible = true
+	if Global.SwitchSolved:
+		$Sprite2D2.visible = true
+		$Sprite2D.visible = false
+	else:
+		$Sprite2D.visible = true
+		$Sprite2D2.visible = false

@@ -4,6 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://c36d7o3gsfkqj" path="res://ChatGPT Image May 9, 2026, 04_39_52 PM (1).png" id="2_i5jw2"]
 [ext_resource type="Script" uid="uid://ddvtypu8lw253" path="res://exit.gd" id="4_1dgfg"]
 [ext_resource type="Texture2D" uid="uid://ldw3ad5shryi" path="res://image (6).png" id="4_6alfa"]
+[ext_resource type="Texture2D" uid="uid://b6i8ny0kls7a0" path="res://Blank Button.png" id="4_stci2"]
+[ext_resource type="Texture2D" uid="uid://b8q0vq37js502" path="res://Green_Button-removebg-preview (1).png" id="5_1dgfg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_stci2"]
 size = Vector2(188.00002, 324)
@@ -104,6 +106,15 @@ visible = false
 position = Vector2(1852.1913, 1144.58)
 scale = Vector2(1.3515284, 1.2430556)
 texture = ExtResource("4_6alfa")
+
+[node name="Light" type="Sprite2D" parent="." unique_id=723079132]
+position = Vector2(134, 136)
+texture = ExtResource("4_stci2")
+
+[node name="Lightened" type="Sprite2D" parent="." unique_id=1741494348]
+visible = false
+position = Vector2(135, 137)
+texture = ExtResource("5_1dgfg")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1515433897]
 

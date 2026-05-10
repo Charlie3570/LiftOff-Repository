@@ -1,16 +1,16 @@
-[gd_scene format=3 uid="uid://bpsv63swwiymo"]
+[gd_scene format=3 uid="uid://cmlakfl81cghm"]
 
-[ext_resource type="Script" uid="uid://caup630na01jt" path="res://darken.gd" id="1_vfv6s"]
-[ext_resource type="Texture2D" uid="uid://ce67hhuq2jufq" path="res://ChatGPT Image May 9, 2026, 04_22_35 PM (1).png" id="2_vfv6s"]
-[ext_resource type="Script" uid="uid://ddvtypu8lw253" path="res://exit.gd" id="4_q77ne"]
+[ext_resource type="Script" uid="uid://caup630na01jt" path="res://darken.gd" id="1_3lgg7"]
+[ext_resource type="Texture2D" uid="uid://c502jnrgvkfkf" path="res://LanguageFolder.png" id="2_3lgg7"]
+[ext_resource type="Script" uid="uid://ddvtypu8lw253" path="res://exit.gd" id="3_devx5"]
 
-[node name="SwitchFolder" type="Node2D" unique_id=447127868]
-script = ExtResource("1_vfv6s")
+[node name="LanguageFolder" type="Node2D" unique_id=447127868]
+script = ExtResource("1_3lgg7")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=269768614]
 position = Vector2(1142.1278, 701.0754)
 scale = Vector2(1.0198421, 1.0370352)
-texture = ExtResource("2_vfv6s")
+texture = ExtResource("2_3lgg7")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=761490135]
 offset_right = 2285.0
@@ -29,5 +29,5 @@ offset_right = 1161.0
 offset_bottom = 741.6
 scale = Vector2(3, 3)
 text = "V"
-script = ExtResource("4_q77ne")
+script = ExtResource("3_devx5")
 metadata/_edit_use_anchors_ = true

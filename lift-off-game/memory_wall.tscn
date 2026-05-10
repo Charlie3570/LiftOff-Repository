@@ -4,12 +4,16 @@
 [ext_resource type="Texture2D" uid="uid://22rysivoc4la" path="res://ChatGPT Image May 9, 2026, 03_58_22 PM (1).png" id="2_33mnl"]
 [ext_resource type="Script" uid="uid://coxrbc2cxjq7h" path="res://screen_area_2d.gd" id="2_shrh5"]
 [ext_resource type="Script" uid="uid://lt2kbhbnjqul" path="res://switch_folder_2d.gd" id="4_e3jt3"]
+[ext_resource type="Script" uid="uid://ds6aftqsltdtx" path="res://language_folder.gd" id="5_xeeck"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_33mnl"]
 size = Vector2(268, 204.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xeeck"]
 size = Vector2(119.5, 100.625)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uq2ry"]
+size = Vector2(128.3407, 100.625)
 
 [node name="MemoryWall" type="Node2D" unique_id=34537250]
 script = ExtResource("1_33mnl")
@@ -60,6 +64,14 @@ script = ExtResource("4_e3jt3")
 position = Vector2(624.25, 850.3125)
 rotation = 0.082030475
 shape = SubResource("RectangleShape2D_xeeck")
+
+[node name="LanguageFolder" type="Area2D" parent="." unique_id=1973987761]
+script = ExtResource("5_xeeck")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LanguageFolder" unique_id=1371809484]
+position = Vector2(1015.59454, 832.6378)
+rotation = 0.082030475
+shape = SubResource("RectangleShape2D_uq2ry")
 
 [connection signal="pressed" from="CanvasLayer/Left" to="." method="_on_left_pressed"]
 [connection signal="pressed" from="CanvasLayer/Right" to="." method="_on_right_pressed"]
