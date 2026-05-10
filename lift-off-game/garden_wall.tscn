@@ -35,6 +35,30 @@ position = Vector2(1123.5, 695.5)
 scale = Vector2(1.4086902, 1.3969697)
 texture = ExtResource("3_tdglv")
 
+[node name="i1" type="Sprite2D" parent="." unique_id=1523235461]
+visible = false
+position = Vector2(1720, 654)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("8_6w814")
+
+[node name="i2" type="Sprite2D" parent="." unique_id=1582547774]
+visible = false
+position = Vector2(1844.0001, 654.0002)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("9_6s7xd")
+
+[node name="i3" type="Sprite2D" parent="." unique_id=571356797]
+visible = false
+position = Vector2(1720, 779)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("10_j2gbn")
+
+[node name="i4" type="Sprite2D" parent="." unique_id=367371691]
+visible = false
+position = Vector2(1844, 779)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("11_8pnbn")
+
 [node name="ColorRect" type="ColorRect" parent="." unique_id=2046495898]
 visible = false
 offset_right = 2265.0
@@ -90,30 +114,6 @@ script = ExtResource("7_vwbef")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1501435609]
 position = Vector2(1415, 1134)
 shape = SubResource("RectangleShape2D_bt4ch")
-
-[node name="i1" type="Sprite2D" parent="." unique_id=1523235461]
-visible = false
-position = Vector2(1720, 654)
-scale = Vector2(0.2, 0.2)
-texture = ExtResource("8_6w814")
-
-[node name="i2" type="Sprite2D" parent="." unique_id=1582547774]
-visible = false
-position = Vector2(1844.0001, 654.0002)
-scale = Vector2(0.2, 0.2)
-texture = ExtResource("9_6s7xd")
-
-[node name="i3" type="Sprite2D" parent="." unique_id=571356797]
-visible = false
-position = Vector2(1720, 779)
-scale = Vector2(0.2, 0.2)
-texture = ExtResource("10_j2gbn")
-
-[node name="i4" type="Sprite2D" parent="." unique_id=367371691]
-visible = false
-position = Vector2(1844, 779)
-scale = Vector2(0.2, 0.2)
-texture = ExtResource("11_8pnbn")
 
 [connection signal="pressed" from="CanvasLayer/Left" to="." method="_on_left_pressed"]
 [connection signal="pressed" from="CanvasLayer/Right" to="." method="_on_right_pressed"]

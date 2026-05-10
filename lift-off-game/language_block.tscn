@@ -69,12 +69,12 @@ shape = SubResource("RectangleShape2D_avyu3")
 
 [node name="Sprite2D5" type="Sprite2D" parent="." unique_id=1388885602]
 visible = false
-position = Vector2(1325, 357.00006)
+position = Vector2(822, 358.00006)
 scale = Vector2(2.233813, 2.5833333)
 texture = ExtResource("5_axa1c")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1886042410]
-position = Vector2(173, -543)
+position = Vector2(-330, -542)
 script = ExtResource("6_axa1c")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1035389641]
@@ -82,6 +82,7 @@ position = Vector2(1138.125, 904)
 shape = SubResource("RectangleShape2D_commr")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=761490135]
+visible = false
 offset_right = 2265.0
 offset_bottom = 1392.0
 mouse_filter = 1
