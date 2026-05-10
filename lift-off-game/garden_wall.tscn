@@ -7,6 +7,10 @@
 [ext_resource type="Script" uid="uid://hufxmqfqykbn" path="res://flower_2d.gd" id="4_04v7d"]
 [ext_resource type="Texture2D" uid="uid://7i6hg707s6fu" path="res://image-removebg-preview (3).png" id="6_vwbef"]
 [ext_resource type="Script" uid="uid://c6i5fek7iyltk" path="res://area_2dtape.gd" id="7_vwbef"]
+[ext_resource type="Texture2D" uid="uid://drle3a0e4jeg5" path="res://1.png" id="8_6w814"]
+[ext_resource type="Texture2D" uid="uid://ixetwiklj14k" path="res://2.png" id="9_6s7xd"]
+[ext_resource type="Texture2D" uid="uid://bcxvme3pt3wfa" path="res://3.png" id="10_j2gbn"]
+[ext_resource type="Texture2D" uid="uid://gma5xjqagb4c" path="res://4.png" id="11_8pnbn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_04v7d"]
 size = Vector2(360.17035, 144.3125)
@@ -32,6 +36,7 @@ scale = Vector2(1.4086902, 1.3969697)
 texture = ExtResource("3_tdglv")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=2046495898]
+visible = false
 offset_right = 2265.0
 offset_bottom = 1392.0
 mouse_filter = 1
@@ -85,6 +90,30 @@ script = ExtResource("7_vwbef")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1501435609]
 position = Vector2(1415, 1134)
 shape = SubResource("RectangleShape2D_bt4ch")
+
+[node name="i1" type="Sprite2D" parent="." unique_id=1523235461]
+visible = false
+position = Vector2(1720, 654)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("8_6w814")
+
+[node name="i2" type="Sprite2D" parent="." unique_id=1582547774]
+visible = false
+position = Vector2(1844.0001, 654.0002)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("9_6s7xd")
+
+[node name="i3" type="Sprite2D" parent="." unique_id=571356797]
+visible = false
+position = Vector2(1720, 779)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("10_j2gbn")
+
+[node name="i4" type="Sprite2D" parent="." unique_id=367371691]
+visible = false
+position = Vector2(1844, 779)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("11_8pnbn")
 
 [connection signal="pressed" from="CanvasLayer/Left" to="." method="_on_left_pressed"]
 [connection signal="pressed" from="CanvasLayer/Right" to="." method="_on_right_pressed"]

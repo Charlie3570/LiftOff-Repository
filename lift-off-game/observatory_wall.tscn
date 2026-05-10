@@ -29,7 +29,6 @@ position = Vector2(1127.5, 700)
 texture = ExtResource("1_u2nq4")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1492868327]
-visible = false
 offset_right = 2265.0
 offset_bottom = 1392.0
 mouse_filter = 1

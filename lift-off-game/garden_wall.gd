@@ -22,3 +22,11 @@ func _process(delta: float) -> void:
 		$Sprite2D3.visible = true
 	else:
 		$Sprite2D3.visible = false
+	if Global.Piece1Collected:
+		$i1.visible = true
+	if Global.Piece2Collected:
+		$i2.visible = true
+	if Global.Piece3Collected:
+		$i3.visible = true
+	if Global.Piece4Collected:
+		$i4.visible = true

@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://desleygipelgf"]
+
+[ext_resource type="Texture2D" uid="uid://bl80wa2n6thp2" path="res://endscreen.svg" id="1_m3gqu"]
+
+[node name="Final" type="Node2D" unique_id=447127868]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=269768614]
+position = Vector2(1134, 701)
+scale = Vector2(2.5044444, 1.9828571)
+texture = ExtResource("1_m3gqu")
