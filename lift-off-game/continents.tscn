@@ -1,16 +1,88 @@
 [gd_scene format=3 uid="uid://duymxthud1a12"]
 
-[ext_resource type="Script" uid="uid://caup630na01jt" path="res://darken.gd" id="1_u6qfd"]
-[ext_resource type="Texture2D" uid="uid://c502jnrgvkfkf" path="res://LanguageFolder.png" id="2_3fi5a"]
+[ext_resource type="Script" uid="uid://dekjmpn88pdev" path="res://continents.gd" id="1_u6qfd"]
+[ext_resource type="Texture2D" uid="uid://4gg7cnb0s6fe" path="res://ChatGPT Image May 9, 2026, 11_44_50 PM.png" id="2_3fi5a"]
 [ext_resource type="Script" uid="uid://ddvtypu8lw253" path="res://exit.gd" id="3_vmcia"]
+[ext_resource type="Texture2D" uid="uid://b6i8ny0kls7a0" path="res://Blank Button.png" id="4_vmcia"]
+[ext_resource type="Texture2D" uid="uid://b8q0vq37js502" path="res://Green_Button-removebg-preview (1).png" id="5_dqiwi"]
+[ext_resource type="Texture2D" uid="uid://jqfb0iu5oevd" path="res://Yellow_Button-removebg-preview.png" id="6_dqiwi"]
 
-[node name="LanguageFolder" type="Node2D" unique_id=447127868]
+[sub_resource type="CircleShape2D" id="CircleShape2D_u6qfd"]
+radius = 201.3579
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3fi5a"]
+radius = 208.29066
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vmcia"]
+radius = 114.0
+height = 450.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dqiwi"]
+radius = 100.0
+
+[node name="Continents" type="Node2D" unique_id=447127868]
 script = ExtResource("1_u6qfd")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=269768614]
-position = Vector2(1142.1278, 701.0754)
-scale = Vector2(1.0198421, 1.0370352)
+position = Vector2(1139, 701.00006)
+scale = Vector2(1.4221106, 1.4149799)
 texture = ExtResource("2_3fi5a")
+
+[node name="Light" type="Sprite2D" parent="." unique_id=2066975235]
+position = Vector2(134, 136)
+texture = ExtResource("4_vmcia")
+
+[node name="HalfLighten" type="Sprite2D" parent="." unique_id=1005847368]
+visible = false
+position = Vector2(136, 132)
+texture = ExtResource("6_dqiwi")
+
+[node name="Lightened" type="Sprite2D" parent="." unique_id=1463735765]
+visible = false
+position = Vector2(135, 137)
+texture = ExtResource("5_dqiwi")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1264966426]
+offset_left = 74.000015
+offset_top = 1165.9999
+offset_right = 646.0
+offset_bottom = 1279.9999
+rotation = 0.34906584
+theme_override_font_sizes/normal_font_size = 50
+text = "I: North America"
+tab_size = 24
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="." unique_id=1343912866]
+offset_left = 1931.0
+offset_top = 1160.0
+offset_right = 2503.0
+offset_bottom = 1274.0
+rotation = -0.5235988
+theme_override_font_sizes/normal_font_size = 50
+text = "II: Antartica"
+tab_size = 24
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="." unique_id=988814215]
+offset_left = 1978.9999
+offset_top = 82.0
+offset_right = 2551.0
+offset_bottom = 196.0
+rotation = 0.5235988
+theme_override_font_sizes/normal_font_size = 50
+text = "III: Euorope"
+autowrap_trim_flags = 128
+tab_size = 24
+
+[node name="RichTextLabel4" type="RichTextLabel" parent="." unique_id=1339115657]
+offset_left = 112.0
+offset_top = 938.0
+offset_right = 684.0001
+offset_bottom = 1052.0
+rotation = 0.5235988
+theme_override_font_sizes/normal_font_size = 50
+text = "IV: Oceana"
+autowrap_trim_flags = 128
+tab_size = 24
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=761490135]
 offset_right = 2285.0
@@ -31,3 +103,47 @@ scale = Vector2(3, 3)
 text = "V"
 script = ExtResource("3_vmcia")
 metadata/_edit_use_anchors_ = true
+
+[node name="NorthAmerica" type="Area2D" parent="." unique_id=1943198927]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="NorthAmerica" unique_id=695782931]
+polygon = PackedVector2Array(369, 352, 420, 320, 557, 339, 630, 271, 848, 227, 1103, 238, 1016, 343, 888, 430, 826, 500, 671, 607, 657, 731, 559, 723, 467, 588, 462, 474, 393, 429, 298, 460)
+
+[node name="Antarctica" type="Area2D" parent="." unique_id=317601308]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Antarctica" unique_id=818593254]
+polygon = PackedVector2Array(617, 1169, 829, 1159, 948, 1190, 1191, 1152, 1375, 1152, 1687, 1154, 1557, 1213, 1398, 1238, 1155, 1257, 954, 1238, 829, 1211)
+
+[node name="Europe" type="Area2D" parent="." unique_id=2051928120]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Europe" unique_id=220968842]
+polygon = PackedVector2Array(1153, 416, 1220, 301, 1297, 343, 1350, 370, 1371, 500, 1270, 573, 1053, 575, 1059, 474, 1000, 389, 1034, 338)
+
+[node name="Oceania" type="Area2D" parent="." unique_id=1724408980]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Oceania" unique_id=312393343]
+polygon = PackedVector2Array(1620, 753, 1726, 702, 1820, 801, 1904, 826, 1992, 993, 1887, 1069, 1720, 1041, 1638, 987, 1659, 905, 1599, 815)
+
+[node name="Others" type="Area2D" parent="." unique_id=2102085649]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Others" unique_id=1395940866]
+position = Vector2(1573, 504)
+shape = SubResource("CircleShape2D_u6qfd")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Others" unique_id=828392892]
+position = Vector2(1224, 779)
+shape = SubResource("CircleShape2D_3fi5a")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Others" unique_id=1264689464]
+position = Vector2(776, 906)
+shape = SubResource("CapsuleShape2D_vmcia")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Others" unique_id=1876744908]
+position = Vector2(1812, 375)
+shape = SubResource("CircleShape2D_dqiwi")
+
+[connection signal="input_event" from="NorthAmerica" to="." method="_on_north_america_input_event"]
+[connection signal="input_event" from="Antarctica" to="." method="_on_antarctica_input_event"]
+[connection signal="input_event" from="Europe" to="." method="_on_europe_input_event"]
+[connection signal="input_event" from="Oceania" to="." method="_on_oceania_input_event"]
+[connection signal="input_event" from="Others" to="." method="_on_others_input_event"]
