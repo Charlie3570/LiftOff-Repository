@@ -85,6 +85,7 @@ autowrap_trim_flags = 128
 tab_size = 24
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=761490135]
+visible = false
 offset_right = 2285.0
 offset_bottom = 1407.0
 mouse_filter = 1

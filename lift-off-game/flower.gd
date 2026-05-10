@@ -1,22 +1,20 @@
 extends Node2D
 
 
-func _on_left_pressed() -> void:
-	get_tree().change_scene_to_file("res://memory_wall.tscn")
-
-
-func _on_right_pressed() -> void:
-	get_tree().change_scene_to_file("res://garden_wall.tscn")
 func _process(delta: float) -> void:
 	if Global.Lights == true and $ColorRect.visible == true:
 		$ColorRect.visible = false
 	elif Global.Lights == false and $ColorRect.visible == false:
 		$ColorRect.visible = true
-
-	if Global.ContinentSolved:
+	if Global.FlowerSolved == true:
 		$Sprite2D.visible = false
 		$Sprite2D2.visible = true
-		
 	else:
-		$Sprite2D2.visible = false
 		$Sprite2D.visible = true
+		$Sprite2D2.visible = false
+func _on_collider_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
+	if event is InputEventMouseButton and event.pressed:
+		$Sprite2D.visible = false
+		$Sprite2D2.visible = true
+		Global.FlowerSolved = true
+	

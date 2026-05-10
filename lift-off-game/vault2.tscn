@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://v8gio7bpdkla"]
+
+[ext_resource type="Script" uid="uid://caup630na01jt" path="res://darken.gd" id="1_45i0h"]
+[ext_resource type="Texture2D" uid="uid://belpmtjoc40xb" path="res://ChatGPT Image May 9, 2026, 11_34_36 PM.png" id="2_yu1y6"]
+[ext_resource type="Script" uid="uid://ddvtypu8lw253" path="res://exit.gd" id="3_3q5qq"]
+
+[node name="Vault" type="Node2D" unique_id=447127868]
+script = ExtResource("1_45i0h")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=269768614]
+position = Vector2(1141.5, 627)
+scale = Vector2(1.9, 1.9)
+texture = ExtResource("2_yu1y6")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=761490135]
+offset_right = 2265.0
+offset_bottom = 1392.0
+mouse_filter = 1
+color = Color(0, 0, 0, 0.6666667)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1515433897]
+
+[node name="Exit" type="Button" parent="CanvasLayer" unique_id=1616172275]
+anchors_preset = -1
+anchor_bottom = 0.39600003
+offset_left = 1143.0
+offset_top = 1265.0
+offset_right = 1161.0
+offset_bottom = 741.6
+scale = Vector2(3, 3)
+text = "V"
+script = ExtResource("3_3q5qq")
+metadata/_edit_use_anchors_ = true

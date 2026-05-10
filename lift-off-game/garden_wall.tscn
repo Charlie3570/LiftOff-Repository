@@ -3,9 +3,14 @@
 [ext_resource type="Texture2D" uid="uid://dp4t7m8qpkmqr" path="res://Screenshot 2026-05-09 114617.png" id="1_lopij"]
 [ext_resource type="Script" uid="uid://bgx7qno6w4fjo" path="res://garden_wall.gd" id="1_rry7k"]
 [ext_resource type="Script" uid="uid://dor4wkiedpjld" path="res://language_block_2d.gd" id="3_ebky8"]
+[ext_resource type="Script" uid="uid://hufxmqfqykbn" path="res://flower_2d.gd" id="4_04v7d"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_04v7d"]
 size = Vector2(360.17035, 144.3125)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tdglv"]
+radius = 70.0
+height = 254.0
 
 [node name="GardenWall" type="Node2D" unique_id=119717772]
 script = ExtResource("1_rry7k")
@@ -48,6 +53,13 @@ script = ExtResource("3_ebky8")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LanguageBlock2D" unique_id=1644052059]
 position = Vector2(1784.9148, 438.84375)
 shape = SubResource("RectangleShape2D_04v7d")
+
+[node name="Flower2D" type="Area2D" parent="." unique_id=319927014]
+script = ExtResource("4_04v7d")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Flower2D" unique_id=1781832080]
+position = Vector2(384, 946)
+shape = SubResource("CapsuleShape2D_tdglv")
 
 [connection signal="pressed" from="CanvasLayer/Left" to="." method="_on_left_pressed"]
 [connection signal="pressed" from="CanvasLayer/Right" to="." method="_on_right_pressed"]

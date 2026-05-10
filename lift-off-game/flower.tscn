@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://c0uhtxen456u1"]
+
+[ext_resource type="Script" uid="uid://bf6dd40sxcg23" path="res://flower.gd" id="1_r72as"]
+[ext_resource type="Texture2D" uid="uid://brl6wtr1bi1vc" path="res://ChatGPT Image May 10, 2026, 03_46_54 AM.png" id="2_511j0"]
+[ext_resource type="Script" uid="uid://ddvtypu8lw253" path="res://exit.gd" id="3_cd1mw"]
+[ext_resource type="Texture2D" uid="uid://dn8gt3g7idljh" path="res://ChatGPT Image May 10, 2026, 03_46_54 AM (1).png" id="3_r72as"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_r72as"]
+radius = 150.12439
+height = 711.76306
+
+[node name="Flower" type="Node2D" unique_id=447127868]
+script = ExtResource("1_r72as")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=269768614]
+position = Vector2(1129.5, 689)
+scale = Vector2(1.4, 1.4)
+texture = ExtResource("2_511j0")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=923450337]
+visible = false
+position = Vector2(1127.5, 700)
+texture = ExtResource("3_r72as")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=761490135]
+offset_right = 2265.0
+offset_bottom = 1392.0
+mouse_filter = 1
+color = Color(0, 0, 0, 0.6666667)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1515433897]
+
+[node name="Exit" type="Button" parent="CanvasLayer" unique_id=1616172275]
+anchors_preset = -1
+anchor_bottom = 0.39600003
+offset_left = 1143.0
+offset_top = 1265.0
+offset_right = 1161.0
+offset_bottom = 741.6
+scale = Vector2(3, 3)
+text = "V"
+script = ExtResource("3_cd1mw")
+metadata/_edit_use_anchors_ = true
+
+[node name="Collider2D" type="Area2D" parent="." unique_id=2117124669]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Collider2D" unique_id=2074755719]
+position = Vector2(965.00006, 585.00006)
+shape = SubResource("CapsuleShape2D_r72as")
+
+[connection signal="input_event" from="Collider2D" to="." method="_on_collider_2d_input_event"]

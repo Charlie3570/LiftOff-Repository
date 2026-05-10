@@ -1,0 +1,129 @@
+[gd_scene format=3 uid="uid://cor4ktjvf4tci"]
+
+[ext_resource type="Script" uid="uid://cc2prgcjroe5q" path="res://clock_hand.gd" id="1_cqx04"]
+[ext_resource type="Texture2D" uid="uid://diyjprgcdxmyt" path="res://ChatGPT Image May 10, 2026, 02_25_20 AM.png" id="2_4n1wf"]
+[ext_resource type="Script" uid="uid://ddvtypu8lw253" path="res://exit.gd" id="3_c2meu"]
+[ext_resource type="Texture2D" uid="uid://chailtt466obp" path="res://ChatGPT Image May 10, 2026, 02_34_13 AM (1).png" id="4_cqx04"]
+[ext_resource type="Texture2D" uid="uid://b6i8ny0kls7a0" path="res://Blank Button.png" id="5_ck37u"]
+[ext_resource type="Texture2D" uid="uid://t2iga0b6m4mn" path="res://ChatGPT Image May 10, 2026, 02_34_13 AM (2).png" id="5_nmps5"]
+[ext_resource type="Texture2D" uid="uid://b8q0vq37js502" path="res://Green_Button-removebg-preview (1).png" id="6_nmps5"]
+
+[node name="Clock" type="Node2D" unique_id=447127868]
+script = ExtResource("1_cqx04")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=269768614]
+position = Vector2(1153.5, 698.5)
+scale = Vector2(1.4626021, 1.4564778)
+texture = ExtResource("2_4n1wf")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=761490135]
+offset_right = 2265.0
+offset_bottom = 1392.0
+mouse_filter = 1
+color = Color(0, 0, 0, 0.6666667)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1515433897]
+
+[node name="Exit" type="Button" parent="CanvasLayer" unique_id=1616172275]
+anchors_preset = -1
+anchor_bottom = 0.39600003
+offset_left = 1143.0
+offset_top = 1265.0
+offset_right = 1161.0
+offset_bottom = 741.6
+scale = Vector2(3, 3)
+text = "V"
+script = ExtResource("3_c2meu")
+metadata/_edit_use_anchors_ = true
+
+[node name="UPButton" type="Button" parent="CanvasLayer" unique_id=1395909722]
+offset_left = 1824.0
+offset_top = 404.0
+offset_right = 1889.0
+offset_bottom = 549.0
+theme_override_font_sizes/font_size = 100
+text = "^"
+
+[node name="DOWNButton" type="Button" parent="CanvasLayer" unique_id=819154797]
+offset_left = 1833.0
+offset_top = 710.0
+offset_right = 1889.0
+offset_bottom = 842.0
+theme_override_font_sizes/font_size = 90
+text = "v
+"
+
+[node name="UPButton2" type="Button" parent="CanvasLayer" unique_id=660387110]
+offset_left = 376.0
+offset_top = 407.0
+offset_right = 441.0
+offset_bottom = 552.0
+theme_override_font_sizes/font_size = 100
+text = "^"
+
+[node name="DOWNButton2" type="Button" parent="CanvasLayer" unique_id=2065441937]
+offset_left = 385.0
+offset_top = 713.0
+offset_right = 441.0
+offset_bottom = 845.0
+theme_override_font_sizes/font_size = 90
+text = "v
+"
+
+[node name="Hand" type="Sprite2D" parent="." unique_id=1879184273]
+position = Vector2(1157, 649)
+texture = ExtResource("4_cqx04")
+
+[node name="Hand2" type="Sprite2D" parent="." unique_id=257806897]
+position = Vector2(1157, 649)
+texture = ExtResource("5_nmps5")
+
+[node name="Light" type="Sprite2D" parent="." unique_id=693078770]
+position = Vector2(134, 136)
+texture = ExtResource("5_ck37u")
+
+[node name="Lightened" type="Sprite2D" parent="." unique_id=1057082887]
+visible = false
+position = Vector2(135, 137)
+texture = ExtResource("6_nmps5")
+
+[node name="ColorRect2" type="ColorRect" parent="." unique_id=6697044]
+offset_left = 1738.0
+offset_top = 55.0
+offset_right = 1828.0
+offset_bottom = 165.0
+color = Color(1, 0, 0, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="." unique_id=861414198]
+offset_left = 1851.0
+offset_top = 55.0
+offset_right = 1941.0
+offset_bottom = 165.0
+color = Color(1, 0, 0, 1)
+
+[node name="ColorRect4" type="ColorRect" parent="." unique_id=2114701068]
+offset_left = 1979.0
+offset_top = 52.0
+offset_right = 2069.0
+offset_bottom = 162.0
+
+[node name="ColorRect5" type="ColorRect" parent="." unique_id=240617460]
+offset_left = 2092.0
+offset_top = 52.0
+offset_right = 2182.0
+offset_bottom = 162.0
+
+[node name="Label" type="Label" parent="." unique_id=975124045]
+offset_left = 1948.0
+offset_top = 33.0
+offset_right = 3783.0
+offset_bottom = 157.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 90
+text = ":"
+
+[connection signal="pressed" from="CanvasLayer/UPButton" to="." method="_on_up_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/DOWNButton" to="." method="_on_down_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/UPButton2" to="." method="_on_up_button_2_pressed"]
+[connection signal="pressed" from="CanvasLayer/DOWNButton2" to="." method="_on_down_button_2_pressed"]
